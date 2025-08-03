@@ -1,16 +1,6 @@
-# Zeitlist
+# Sangosho
 
-this is a waitlist app. it uses redis. and arcjet to validate emails.
-
-![](zeitlist.gif)
-
-## Core Functionality
-
-- Provides a simple form for users to submit their email.
-- Validates submitted emails using Arcjet before processing.
-- Stores valid emails in a Redis list managed by Upstash.
-- Displays a live count of total signups.
-
+Landing site for Sangosho
 ## Tech Used
 
 - **Framework:** Next.js
