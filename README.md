@@ -16,8 +16,8 @@ To get this running on your machine:
 1.  **Clone it:**
 
     ```bash
-    git clone ``https://github.com/zeitgg/zeitlist.git`
-    cd zeitlist
+    git clone ``https://github.com/sangosho/sangosho.git`
+    cd sangosho
     ```
 
 2.  **Install dependencies:**
