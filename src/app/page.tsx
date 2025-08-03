@@ -13,7 +13,7 @@ export default function Home() {
           Sangosho
         </SplitText>
         <SplitText className="tracking-tight text-xl">
-          Real-time monitoring for underwater ecosystems
+          AI for protecting underwater ecosystems
         </SplitText>
       </div>
       <WaitlistForm />
