@@ -10,10 +10,10 @@ export default function Home() {
     <div className="flex flex-col h-screen justify-center items-center text-center">
       <div className="mb-8">
         <SplitText className="text-5xl tracking-tighter font-medium">
-          Get early access
+          Sangosho
         </SplitText>
         <SplitText className="tracking-tight text-xl">
-          Be amongst the first to experience our services.
+          Real-time monitoring for underwater ecosystems
         </SplitText>
       </div>
       <WaitlistForm />
@@ -22,7 +22,7 @@ export default function Home() {
       </div>
       <footer className="sticky top-[100vh]">
         <Button size="icon" variant="ghost">
-          <Link href="https://github.com/zeitgg/zeitlist" target="_blank">
+          <Link href="https://github.com/sangosho/sangosho" target="_blank">
             <FaGithub />
           </Link>
         </Button>

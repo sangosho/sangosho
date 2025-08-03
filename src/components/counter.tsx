@@ -59,8 +59,8 @@ export function Counter() {
       className="text-sm text-muted-foreground"
       aria-live="polite"
     >
-      Join <span className="font-bold">{count.toLocaleString()}</span>+ others
-      who signed up
+      {/* Join <span className="font-bold">{count.toLocaleString()}</span>+ others
+      who signed up */}
     </motion.p>
   );
 }

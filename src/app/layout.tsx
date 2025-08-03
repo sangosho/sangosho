@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Zeitlist",
-  description: "A simple Next.js Waitlist application with email validation.",
+  title: "Sangosho",
+  description: "Real-time monitoring for underwater ecosystems",
 };
 
 export default function RootLayout({
