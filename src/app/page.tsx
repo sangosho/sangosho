@@ -50,12 +50,14 @@ export default function Home() {
                   Sangosho
                 </h1>
               ) : (
-                <SplitText 
-                  as="h1"
-                  className="text-6xl md:text-7xl tracking-tight font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[#FF5F57] via-[#2D8EFF] to-[#28CA42]"
-                >
-                  Sangosho
-                </SplitText>
+                <div className="mb-6 overflow-visible"> {/* Added wrapper div */}
+                  <SplitText 
+                    as="h1"
+                    className="text-6xl md:text-7xl tracking-tight font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF5F57] via-[#2D8EFF] to-[#28CA42]"
+                  >
+                    Sangosho
+                  </SplitText>
+                </div>
               )}
               <SplitText 
                 as="h2"

@@ -10,6 +10,8 @@ function Stylesheet() {
       .split-word {
           will-change: transform, opacity, filter;
           display: inline-block;
+          line-height: 1.1; /* Added for better vertical alignment */
+          vertical-align: bottom; /* Ensures characters sit properly */
       }
     `}</style>
   );
@@ -37,7 +39,7 @@ export default function SplitText({
 
       element.style.visibility = "visible";
 
-      const { words } = splitText(element); // Removed the options object
+      const { words } = splitText(element);
 
       if (!words || words.length === 0) {
         return;
@@ -64,7 +66,7 @@ export default function SplitText({
     <>
       <Tag
         ref={elementRef as any}
-        className={className}
+        className={`${className} leading-tight`} // Added leading-tight
         style={{ visibility: "hidden" }}
       >
         {children}

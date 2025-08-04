@@ -128,3 +128,7 @@
     background-image: none !important;
   }
 }
+
+.text-gradient {
+  padding-bottom: 2px; /* Gives extra space at bottom */
+}
