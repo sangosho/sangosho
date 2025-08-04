@@ -108,11 +108,11 @@ export default function Home() {
                 className="text-xl leading-relaxed text-gray-300 max-w-3xl mx-auto"
               >
                 We're building AI systems that autonomously monitor and protect marine biodiversity.
-                Our goal is to safeguard 1 million square kilometers of ocean ecosystems by 2030.
+                Our goal is to safeguard 1000 square kilometers of coral reef by 2030.
               </SplitText>
-              <div className="mt-12">
+              {/* <div className="mt-12">
                 <Counter />
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
