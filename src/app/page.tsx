@@ -39,18 +39,18 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/70"></div>
       </div>
 
-      {/* Content Container */}
-      <div className="relative z-10 flex flex-col">
+      {/* Content Container with single blur context */}
+      <div className="relative z-10 flex flex-col backdrop-blur-sm bg-black/10">
         {/* Product Section */}
-        <section className="flex-1 flex flex-col justify-center items-center text-center px-4 py-32 backdrop-blur-sm bg-black/10">
-          <div className="max-w-4xl mx-auto w-full bg-black/60 p-12 rounded-2xl border border-white/10 shadow-xl backdrop-blur-sm">
+        <section className="flex-1 flex flex-col justify-center items-center text-center px-4 py-32">
+          <div className="max-w-4xl mx-auto w-full bg-black/60 p-12 rounded-2xl border border-white/10 shadow-xl">
             <div className="mb-16">
               {isSafari ? (
                 <h1 className="text-6xl md:text-7xl tracking-tight font-bold mb-6 text-white">
                   Sangosho
                 </h1>
               ) : (
-                <div className="mb-6 overflow-visible"> {/* Added wrapper div */}
+                <div className="mb-6 overflow-visible">
                   <SplitText 
                     as="h1"
                     className="text-6xl md:text-7xl tracking-tight font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF5F57] via-[#2D8EFF] to-[#28CA42]"
@@ -96,9 +96,9 @@ export default function Home() {
               ].map((item, index) => (
                 <div 
                   key={index} 
-                  className={`p-8 rounded-xl border ${item.border} ${item.bg} ${item.glow} transition-all duration-500 hover:-translate-y-2 hover:scale-[1.03] hover:shadow-lg backdrop-blur-sm`}
+                  className={`p-8 rounded-xl border ${item.border} ${item.bg} ${item.glow} transition-all duration-500 hover:-translate-y-2 hover:scale-[1.03] hover:shadow-lg`}
                 >
-                  <div className="w-16 h-16 rounded-full bg-black/40 flex items-center justify-center mx-auto mb-4 p-1 backdrop-blur-sm">
+                  <div className="w-16 h-16 rounded-full bg-black/40 flex items-center justify-center mx-auto mb-4 p-1">
                     {item.icon}
                   </div>
                   <h3 className="text-xl font-semibold mb-2 whitespace-nowrap">
@@ -112,10 +112,11 @@ export default function Home() {
         </section>
 
         {/* Vision Section */}
-        <section className="py-20 backdrop-blur-sm bg-black/10">
+        <section className="py-20 relative">
+          <div className="absolute inset-x-0 top-0 h-8 bg-gradient-to-b from-black/10 to-transparent -mt-8" />
           <div className="max-w-4xl mx-auto px-4 w-full">
-            <div className="bg-black/60 p-12 rounded-2xl border border-white/10 shadow-xl text-center backdrop-blur-sm">
-              <div className="w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-8 bg-gradient-to-br from-[#2D8EFF]/30 to-[#2D8EFF]/10 backdrop-blur-sm">
+            <div className="bg-black/60 p-12 rounded-2xl border border-white/10 shadow-xl text-center">
+              <div className="w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-8 bg-gradient-to-br from-[#2D8EFF]/30 to-[#2D8EFF]/10">
                 <FaWater className="w-12 h-12 text-[#2D8EFF]" />
               </div>
               <SplitText 
@@ -133,12 +134,14 @@ export default function Home() {
               </SplitText>
             </div>
           </div>
+          <div className="absolute inset-x-0 bottom-0 h-8 bg-gradient-to-t from-black/10 to-transparent -mb-8" />
         </section>
 
         {/* Waitlist Section */}
-        <section className="py-32 backdrop-blur-sm bg-black/10">
+        <section className="py-32 relative">
+          <div className="absolute inset-x-0 top-0 h-8 bg-gradient-to-b from-black/10 to-transparent -mt-8" />
           <div className="max-w-2xl mx-auto px-4 w-full">
-            <div className="bg-black/60 p-12 rounded-2xl border border-white/10 shadow-xl text-center backdrop-blur-sm">
+            <div className="bg-black/60 p-12 rounded-2xl border border-white/10 shadow-xl text-center">
               <SplitText 
                 as="h2"
                 className="text-4xl font-bold mb-6"
@@ -153,10 +156,12 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className="absolute inset-x-0 bottom-0 h-8 bg-gradient-to-t from-black/10 to-transparent -mb-8" />
         </section>
 
         {/* Footer */}
-        <footer className="bg-black/80 py-12 border-t border-white/10 backdrop-blur-sm">
+        <footer className="bg-black/80 py-12 border-t border-white/10 relative">
+          <div className="absolute inset-x-0 top-0 h-8 bg-gradient-to-b from-black/10 to-transparent -mt-8" />
           <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
               <p className="text-xl font-medium">Sangosho</p>
