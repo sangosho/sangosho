@@ -15,29 +15,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
   title: "Sangosho",
-  description: "Real-time monitoring for underwater ecosystems",
+  description: "AI for protecting underwater ecosystems",
   openGraph: {
-    title: "Sangosho - AI for Protecting Underwater Ecosystems",
-    description: "Advanced AI solutions for marine conservation and ecosystem monitoring",
-    url: "https://sangosho.xyz",
-    siteName: "Sangosho",
+    title: "Sangosho",
+    description: "AI for protecting underwater ecosystems",
     images: [
       {
-        url: "/og-image.jpg", // Make sure this file is in the public folder
+        url: "/og-image.jpg",
         width: 1200,
-        height: 603,
-        alt: "Sangosho Ocean Conservation AI",
+        height: 630,
+        alt: "Sangosho - AI Ocean Conservation",
       },
     ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Sangosho - AI for Protecting Underwater Ecosystems",
-    description: "Advanced AI solutions for marine conservation and ecosystem monitoring",
-    images: ["/og-image.jpg"], // Same image for Twitter
   },
 };
 

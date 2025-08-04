@@ -120,3 +120,11 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Add this to your global CSS */
+@supports not (background-clip: text) {
+  .sangosho-title {
+    color: #2D8EFF !important; /* Fallback color */
+    background-image: none !important;
+  }
+}

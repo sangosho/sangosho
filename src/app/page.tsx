@@ -1,4 +1,4 @@
-import { Counter } from "@/components/counter";
+// import { Counter } from "@/components/counter";
 import { Button } from "@/components/ui/button";
 import SplitText from "@/components/ui/split-text";
 import { WaitlistForm } from "@/components/waitlist-form";
@@ -10,13 +10,13 @@ export default function Home() {
     <div className="min-h-screen text-white flex flex-col relative overflow-hidden">
       {/* Video Background */}
       <div className="fixed inset-0 z-0">
-        <video 
-          autoPlay 
-          loop 
-          muted 
-          playsInline 
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
           className="w-full h-full object-cover"
-          poster="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3264&q=80"
+          poster="/fallback-underwater.jpg"
         >
           <source 
             src="https://videos.pexels.com/video-files/2863422/2863422-uhd_2560_1440_24fps.mp4" 
@@ -138,7 +138,7 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <footer className="bg-black/80 py-12 mt-4 border-t border-white/10 backdrop-blur-sm">
+        <footer className="bg-black/80 py-12 border-white/10 backdrop-blur-sm">
           <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
               <p className="text-xl font-medium">Sangosho</p>
