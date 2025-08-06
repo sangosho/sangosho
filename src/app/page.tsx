@@ -8,15 +8,20 @@ import { FaGithub, FaWaveSquare, FaWater, FaFish, FaChartLine } from "react-icon
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [isSafari, setIsSafari] = useState(false);
+  const [browser, setBrowser] = useState<'safari' | 'chrome' | 'other'>('other');
 
   useEffect(() => {
-    // Check if the browser is Safari
     const userAgent = window.navigator.userAgent;
-    setIsSafari(
+    if (/chrome|chromium|crios/i.test(userAgent)) {
+      setBrowser('chrome');
+    } else if (
       /^((?!chrome|android).)*safari/i.test(userAgent) ||
       /iPad|iPhone|iPod/.test(userAgent)
-    );
+    ) {
+      setBrowser('safari');
+    } else {
+      setBrowser('other');
+    }
   }, []);
 
   return (
@@ -45,7 +50,11 @@ export default function Home() {
         <section className="flex-1 flex flex-col justify-center items-center text-center px-4 py-32">
           <div className="max-w-4xl mx-auto w-full bg-black/60 p-12 rounded-2xl border border-white/10 shadow-xl">
             <div className="mb-16">
-              {isSafari ? (
+              {browser === 'safari' ? (
+                <h1 className="text-6xl md:text-7xl tracking-tight font-bold mb-6 text-white">
+                  Sangosho
+                </h1>
+              ) : browser === 'chrome' ? (
                 <h1 className="text-6xl md:text-7xl tracking-tight font-bold mb-6 text-white">
                   Sangosho
                 </h1>
